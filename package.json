@@ -1,0 +1,17 @@
+{
+  "name": "phaze",
+  "version": "1.0.0",
+  "description": "Using code transforming in your node apps without caring much about configurations.",
+  "author": "oyyd <oyydoibh@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "node"
+  ],
+  "scripts": {
+    "docs:build": "gitbook build doc && mv doc/_book docs"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0",
+    "lerna": "2.0.0-beta.38"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "phase-cli",
+  "version": "1.0.0",
+  "description": "Using code transforming in your node apps without caring much about configurations.",
+  "main": "index.js",
+  "keywords": [
+    "node"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "dev": "jest --watch",
+    "test": "jest --no-cache"
+  },
+  "author": "oyyd <oyydoibh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "chalk": "^1.1.3",
+    "chokidar": "^1.6.1",
+    "phase-core": "^1.0.0",
+    "yargs": "^7.0.2",
+    "phase-preset-coffee": "^1.0.0",
+    "phase-preset-flowtype": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^19.0.2",
+    "regenerator-runtime": "^0.10.3",
+    "source-map-support": "^0.4.13"
+  },
+  "jest": {
+    "setupFiles": [
+      "babel-polyfill"
+    ],
+    "testRegex": "src/.*/__tests__/.*spec\\.js$"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-async-to-generator"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base"
+    ],
+    "rules": {
+      "semi": [
+        2,
+        "never"
+      ],
+      "no-restricted-syntax": 0,
+      "no-await-in-loop": 0
+    },
+    "env": {
+      "jasmine": true,
+      "node": true
+    },
+    "globals": {
+      "jest": true
+    }
+  }
+}

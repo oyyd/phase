@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["number"],"mappings":"AAAA,MAAMA,SAAiB,EAAvB","file":"index.js","sourceRoot":"/Users/liangduan/code/github/phase/packages/phase-preset-flowtype/lib","sourcesContent":["const number: String = 42\n"]}
