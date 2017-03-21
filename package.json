@@ -8,7 +8,9 @@
     "node"
   ],
   "scripts": {
-    "docs:build": "gitbook build doc && mv doc/_book docs"
+    "docs:prepare": "gitbook install doc_src",
+    "docs:preview": "npm run docs:prepare && gitbook serve doc_src",
+    "docs:build": "npm run docs:prepare && gitbook build doc_src && rm -rf docs && mv doc_src/_book docs"
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.0",
