@@ -1,4 +1,5 @@
 WORKING.md
 .git
 node_modules
-doc_src/_book
+_book
+doc_src/README.md
